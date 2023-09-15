@@ -228,10 +228,7 @@ public class CountryServiceImpl implements CountryService {
         double convertedValue = request.getAmount() * rate;
         CurrencyConversionResponse response = new CurrencyConversionResponse();
         response.setCountryCurrency(sourceCurrency);
-        log.info("source currency " + sourceCurrency);
         response.setTargetAmount(request.getTargetCurrency() + " " + convertedValue);
-        log.info("Target Amount " + request.getTargetCurrency() + " " + convertedValue);
-        log.info("Conversion " + conversion);
         return ApiResponse.builder()
                 .msg("Successful")
                 .data(response)
