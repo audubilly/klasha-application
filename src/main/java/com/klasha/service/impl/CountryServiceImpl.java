@@ -11,6 +11,7 @@ import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.MediaType;
 import org.springframework.stereotype.Service;
 import org.springframework.web.reactive.function.client.WebClient;
 import reactor.core.publisher.Mono;
@@ -171,8 +172,9 @@ public class CountryServiceImpl implements CountryService {
             CountryDto dto = new CountryDto();
             dto.setCountry(country);
 
-            StateDetailResponse response = webClient.get()
+            StateDetailResponse response = webClient.post()
                     .uri(stateUrl)
+                    .accept(MediaType.APPLICATION_JSON)
                     .retrieve()
                     .bodyToMono(StateDetailResponse.class)
                     .block();
