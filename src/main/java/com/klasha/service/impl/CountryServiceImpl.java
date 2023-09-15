@@ -220,7 +220,6 @@ public class CountryServiceImpl implements CountryService {
 
         String sourceCurrency = getCurrency(request.getCountry());
         String conversion = sourceCurrency + "_" + request.getTargetCurrency();
-        System.out.println("Converting::" + conversion);
         if(!validConversions.contains(conversion))
             throw new BadRequestException("Invalid Conversion, Please try again!");
         CurrencyConversionConstant conversionConstant = CurrencyConversionConstant.valueOf(conversion);
