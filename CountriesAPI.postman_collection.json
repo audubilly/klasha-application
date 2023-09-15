@@ -1,0 +1,128 @@
+{
+	"info": {
+		"_postman_id": "77abbd29-f856-4466-a8a4-c6835a92fb5a",
+		"name": "CountriesAPI",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "16244982"
+	},
+	"item": [
+		{
+			"name": "Get City By Poplulation",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/countries/get-city-by-population?number_of_cities=10",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"countries",
+						"get-city-by-population"
+					],
+					"query": [
+						{
+							"key": "number_of_cities",
+							"value": "10"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Country Data",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/countries/get-country-data?country=Nigeria",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"countries",
+						"get-country-data"
+					],
+					"query": [
+						{
+							"key": "country",
+							"value": "Nigeria"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Retrieve State Detail",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/countries/retrieve-state-detail?country=Nigeria",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"countries",
+						"retrieve-state-detail"
+					],
+					"query": [
+						{
+							"key": "country",
+							"value": "Nigeria"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Currency Conversion",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/countries/currency-conversion?country=Italy&amount=20&target-currency=NGN",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"countries",
+						"currency-conversion"
+					],
+					"query": [
+						{
+							"key": "country",
+							"value": "Italy"
+						},
+						{
+							"key": "amount",
+							"value": "20"
+						},
+						{
+							"key": "target-currency",
+							"value": "NGN"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
