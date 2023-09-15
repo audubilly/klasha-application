@@ -23,10 +23,10 @@ Table of Contents
 
         Integrated Development Environment (IDE): You can use popular IDEs like Eclipse, IntelliJ IDEA, or Visual Studio Code.
 
-        Build Tool (Optional): Spring Boot projects can be built and managed using Maven or Gradle. Make sure you have one of these installed:
+        Build Tool (Optional): This Spring Boot project is built and managed using Maven . Make sure you have one of it installed:
 
         Apache Maven
-        Gradle
+       
     
   2.2 Steps to Set Up and Run the Project
     
